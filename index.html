@@ -1,0 +1,104 @@
+<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>HTML, CSS and JavaScript Slideout Navigation</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
+
+  <link rel="stylesheet" href="stylesheets/main.css">
+</head>
+<body>
+  <!--[if lt IE 8]>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+  <nav class="slideout-nav">
+    <ul class='navigation margin-bottom-20'>
+      <li><a href="#link">Home</a></li>
+      <li><a href="#link">About</a></li>
+      <li><a href="#link">Blog</a></li>
+      <li><a href="#link">Contact</a></li>
+    </ul>
+
+    <div class="margin-bottom-20">
+      <h3>Recent Blog Posts</h3>
+      <ul class="recent-posts">
+        <li><a href="http://sparkmasterflex.com/my-first-marketable-product/" rel='external'>My First Marketable Product</a></li>
+        <li><a href="http://sparkmasterflex.com/marx-js-web-developers-best-friend/" rel='external'>Marx.js – Web Developer’s Best Friend</a></li>
+        <li><a href="http://sparkmasterflex.com/the-very-best-ruby-on-rails-workflow-ever/" rel='external'>The Very Best Ruby on Rails Workflow – Ever!</a></li>
+        <li><a href="http://sparkmasterflex.com/beat-php-over-the-head-with-json/" rel='external'>Beat PHP Over the Head With JSON</a></li>
+        <li><a href="http://sparkmasterflex.com/motivation-the-elusive-white-whale/" rel='external'>Motivation: The Elusive White Whale</a></li>
+      </ul>
+    </div>
+
+
+    <form class="margin-bottom-20">
+      <h3>Contact Me</h3>
+      <input type="text" name='name' placeholder='Name'>
+      <input type="email" name='email' placeholder='Email'>
+      <textarea name="message" placeholder='Message'></textarea>
+      <input type="submit" value="Submit" />
+    </form>
+    <a href="#close" class="close">X</a>
+  </nav>
+  <div id="wrapper">
+    <header>
+      <section>
+        <h1>A Header Here</h1>
+        <h2>Sub-header here</h2>
+
+        <a href="#open-menu" class="open-menu" title="Open Menu">
+          <hr />
+          <hr />
+          <hr />
+        </a>
+      </section>
+    </header>
+    <div id="content">
+      <section>
+        <h3>Page Header</h3>
+        <img src="http://sparkmasterflex.com/wp-content/themes/sparkmasterflex/images/logos/sparkmasterflex-logo.png" alt="Sparkmasterflex" />
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio rerum aspernatur nobis fuga pariatur quod, harum iusto hic nemo molestias. Similique aut non, enim, illo eum excepturi vitae aliquam quisquam.</p>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio rerum aspernatur nobis fuga pariatur quod, harum iusto hic nemo molestias. Similique aut non, enim, illo eum excepturi vitae aliquam quisquam.</p>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio rerum aspernatur nobis fuga pariatur quod, harum iusto hic nemo molestias. Similique aut non, enim, illo eum excepturi vitae aliquam quisquam.</p>
+
+        <form class='nav-options'>
+          <h3 class='margin-bottom-20'>Select Nav Style</h3>
+          <div class="field">
+            <input id='push-toleft' type="radio" name='nav-type' value="push-toleft" checked="checked" />
+            <label for="push-toleft">Push Left</label>
+          </div>
+          <div class="field">
+            <input id='push-toright' type="radio" name='nav-type' value="push-toright" />
+            <label for="push-toright">Push Right</label>
+          </div>
+          <div class="field">
+            <input id='slide-toleft' type="radio" name='nav-type' value="slide-toleft" />
+            <label for="slide-toleft">Slide Left</label>
+          </div>
+          <div class="field">
+            <input id='slide-toright' type="radio" name='nav-type' value="slide-toright" />
+            <label for="slide-toright">Slide Right</label>
+          </div>
+        </form>
+      </section>
+    </div>
+    <footer>
+      <section>
+        <ul>
+          <li>By: Keith Raymond</li>
+          <li>Get Code: <a href="https://github.com/Sparkmasterflex">github.com/Sparkmasterflex</a></li>
+          <li>Read Post: <a href="http://sparkmasterflex.com">sparkmasterflex.com</a></li>
+        </ul>
+      </section>
+    </footer>
+  </div>
+  <script src='javascripts/production.js'></script>
+</body>
+</html>

@@ -1,0 +1,180 @@
+@import mixins
+
+/*======================*\
+     HTML/CSS HACKS
+\*======================*/
+header, section, footer, aside, nav, article, figure { display: block; }
+
+/**
+ * From: http://nicolasgallagher.com/micro-clearfix-hack/
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.cf
+  clearfix()
+
+::-moz-selection
+  background: #333
+  color: #fff
+  text-shadow: none
+
+::selection
+  background: #333
+  color: #fff
+  text-shadow: none
+
+
+:focus
+  no-box-shadow()
+
+
+html
+  -webkit-font-smoothing: antialiased
+
+body
+  // font-size sets 1em == 10px
+  font-size: 62.5%
+  font-family: Arial, san-serif
+  -webkit-animation: reset 1s ease 1
+     -moz-animation: reset 1s ease 1
+       -o-animation: reset 1s ease 1
+          animation: reset 1s ease 1
+
+  -webkit-animation: fade-in 1s ease 1
+     -moz-animation: fade-in 1s ease 1
+       -o-animation: fade-in 1s ease 1
+          animation: fade-in 1s ease 1
+
+
+section
+  position relative
+  max-width: 1200px
+  width: 100%
+  margin: 0 auto
+  padding: 1em 0;
+  clearfix()
+
+
+h1, .h1 { font-size: 4.8em }
+h2, .h2 { font-size: 3.6em }
+h3, .h3 { font-size: 3.0em }
+h4, .h4 { font-size: 2.4em }
+h5, .h5 { font-size: 2.0em }
+h6, .h6 { font-size: 1.8em }
+
+
+p, li, a, td
+  font-size: 1.4em
+  line-height: 1.5em
+  p, li, a, td
+    font-size: 1em // all nested elements here will be 14px
+
+
+li ul
+  padding-left: 1em
+
+ul, ol
+  &.disc
+    list-style: disc
+  &.numbered
+    list-style: decimal
+
+
+strong
+  font-weight: bold
+em
+  font-style: italic
+
+form.nav-options
+  position fixed
+  bottom 0
+  left 50%
+  width 300px
+  padding 20px
+  margin-left -160px
+  background-color #eee
+  border 1px solid #ddd
+  .field { margin-bottom: 15px }
+  label { font-size: 1.6em }
+
+
+nav.slideout-nav
+  h3
+    color: $white
+    margin-bottom 10px
+  input, textarea
+    font-size 1.6em
+    width 94%
+    width calc(100% \- 1em)
+    padding 0.35em 0.5em
+    margin-bottom 0.5em
+    border none
+    border-bottom 1px solid #fff
+    background-color rgba(#fff, 0.2)
+    &[type=submit]
+      width 100%
+      background-color rgba(#fff, 0.75)
+
+  textarea
+    height 40px
+
+
+::-webkit-input-placeholder { color: #ccc }
+:-moz-placeholder { color: #ccc }
+::-moz-placeholder { color: #ccc }
+:-ms-input-placeholder { color: #ccc }
+
+
+
+
+/*==============================*\
+            ANIMATIONS
+\*==============================*/
+
+/*----- reset animation -----*/
+@-webkit-keyframes reset
+  0%
+    opacity: 0
+  100%
+    opacity: 0
+
+
+@-moz-keyframes reset
+  0%
+    opacity: 0
+  100%
+    opacity: 0
+
+
+@-o-keyframes reset
+  0%
+    opacity: 0
+  100%
+    opacity: 0
+
+/*----- fade-in animation -----*/
+@-webkit-keyframes fade-in
+  0%
+    opacity: 0
+  100%
+    opacity: 1
+
+
+@-moz-keyframes fade-in
+  0%
+    opacity: 0
+  100%
+    opacity: 1
+
+
+@-o-keyframes fade-in
+  0%
+    opacity: 0
+  100%
+    opacity: 1

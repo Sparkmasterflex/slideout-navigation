@@ -1,0 +1,151 @@
+// standard
+$grey = #ccc
+$grey-dk = #666
+$grey-lt = #efefef
+$black = #000
+$white = #fff
+// $text: TODO: add color
+
+
+//======================== SIZING
+square(dim)
+  width: dim
+  height: dim
+
+//======================== BACKGROUNDS
+gradient-two(c1, c2, p1 = 0%, p2 = 100%, start = top)
+  background-color: c1
+  background: -moz-linear-gradient(start, c1 p1, c2 p2)
+  background: -webkit-linear-gradient(start, c1 p1, c2 p2)
+  background: -o-linear-gradient(start, c1 p1, c2 p2)
+  background: -ms-linear-gradient(start, c1 p1, c2 p2)
+  background: linear-gradient(start,c1 p1, c2 p2)
+  if $start == top
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(p1,c1), color-stop(p2,c2))
+  else
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(p1,c1), color-stop(p2,c2))
+
+
+bg-size(w, h = null)
+  -webkit-background-size: w h
+  -moz-background-size: w h
+  -ms-background-size: w h
+  -o-background-size: w h
+  background-size: w h
+
+
+hidden()
+  text-indent: -9999px
+  overflow: hidden
+
+
+icon(size)
+  display: inline-block
+  square(size)
+  hidden()
+  background-repeat: no-repeat
+  background-position: center center
+  bg-size(100%, auto)
+
+
+with-icon(size)
+  background-repeat: no-repeat
+  background-position: left center
+  padding: (size/4) 0 (size/4) (size+6)
+  bg-size(size, auto)
+
+
+
+
+//======================== RESETS
+clearfix()
+  *zoom: 1; // For IE 6/7 only
+  &:before,
+  &:after { content: " "; /* 1 */ display: table; /* 2 */ }
+  &:after { clear: both }
+
+
+position-reset()
+  position: relative
+  top: 0
+  left: 0
+  z-index: 0
+
+
+hidden-reset()
+  text-indent: 0
+  overflow: visible
+  background-image: none
+
+
+
+//======================== SKINS/SHADOWS
+border-radius(tl, tr = null, br = null, bl = null)
+  if tr == null
+    -webkit-border-radius: tl
+    -moz-border-radius: tl
+    -o-border-radius: tl
+    border-radius: tl
+  else
+    -webkit-border-radius: tl tr br bl
+    -moz-border-radius: tl tr br bl
+    -o-border-radius: tl tr br bl
+    border-radius: tl tr br bl
+
+border-radius(tl)
+  -webkit-border-radius: tl
+  -moz-border-radius: tl
+  -o-border-radius: tl
+  border-radius: tl
+
+//======================== SKINS/SHADOWS
+box-shadow(x, y, blur, color)
+  -webkit-box-shadow: x y blur color
+  -moz-box-shadow: x y blur color
+  -o-box-shadow: x y blur color
+  box-shadow: x y blur color
+
+
+inset-shadow(x, y, blur, color)
+  -webkit-box-shadow: inset x y blur color
+  -moz-box-shadow: inset x y blur color
+  -o-box-shadow: inset x y blur color
+  box-shadow: inset x y blur color
+
+
+one-side-shadow(x, y, blur, color)
+  // blur should be negative pixels
+  -webkit-box-shadow: 0 x y blur color
+  -moz-box-shadow: 0 x y blur color;
+  -o-box-shadow: 0 x y blur color;
+  box-shadow: 0 x y blur color;
+
+
+no-box-shadow()
+  box-shadow(0, 0, 0, transparent)
+
+
+
+
+//======================== TRANSITIONS/TRANSFORM
+transition(style, duration, ease = ease-in-out, delay = 0s)
+  -webkit-transition: style duration ease;
+  -moz-transition: style duration ease;
+  -o-transition: style duration ease;
+  transition: style duration ease;
+
+rotate_to(percent)
+  -webkit-transform: rotate(percent)
+  -moz-transform: rotate(percent)
+  -ms-transform: rotate(percent)
+  -o-transform: rotate(percent)
+  transform: rotate(percent)
+
+
+flip()
+  -webkit-transform: scaleX(-1)
+  -moz-transform: scaleX(-1)
+  -o-transform: scaleX(-1)
+  transform: scaleX(-1)
+  -ms-filter: "FlipH"
+  filter: FlipH

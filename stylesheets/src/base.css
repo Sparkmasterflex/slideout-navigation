@@ -1,0 +1,386 @@
+
+/* line 286 : /Users/raymondke99/Sites/slideout-navigation/stylesheets/stylus/base.styl */
+
+/* line 1 : /Users/raymondke99/Sites/slideout-navigation/node_modules/grunt-contrib-stylus/node_modules/stylus/lib/functions/index.styl */
+
+/* line 151 : /Users/raymondke99/Sites/slideout-navigation/node_modules/grunt-contrib-stylus/node_modules/stylus/lib/functions/index.styl */
+
+/* line 2 : /Users/raymondke99/Sites/slideout-navigation/stylesheets/stylus/mixins.styl */
+
+/* line 3 : /Users/raymondke99/Sites/slideout-navigation/stylesheets/stylus/base.styl */
+/*======================*     HTML/CSS HACKS
+\*======================*/
+
+/* line 5 : /Users/raymondke99/Sites/slideout-navigation/stylesheets/stylus/base.styl */
+header,
+section,
+footer,
+aside,
+nav,
+article,
+figure {
+  display: block;
+}
+
+/* line 7 : /Users/raymondke99/Sites/slideout-navigation/stylesheets/stylus/base.styl */
+/**
+ * From: http://nicolasgallagher.com/micro-clearfix-hack/
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+/* line 18 : /Users/raymondke99/Sites/slideout-navigation/stylesheets/stylus/base.styl */
+.cf {
+  *zoom: 1;
+}
+
+/* line 63 : /Users/raymondke99/Sites/slideout-navigation/stylesheets/stylus/mixins.styl */
+.cf:before,
+.cf:after {
+  content: " ";
+/* 1 */
+  display: table;
+/* 2 */
+}
+
+/* line 65 : /Users/raymondke99/Sites/slideout-navigation/stylesheets/stylus/mixins.styl */
+.cf:after {
+  clear: both;
+}
+
+/* line 21 : /Users/raymondke99/Sites/slideout-navigation/stylesheets/stylus/base.styl */
+::-moz-selection {
+  background: #333;
+  color: #fff;
+  text-shadow: none;
+}
+
+/* line 26 : /Users/raymondke99/Sites/slideout-navigation/stylesheets/stylus/base.styl */
+::selection {
+  background: #333;
+  color: #fff;
+  text-shadow: none;
+}
+
+/* line 32 : /Users/raymondke99/Sites/slideout-navigation/stylesheets/stylus/base.styl */
+:focus {
+  -webkit-box-shadow: 0 0 0 transparent;
+  -moz-box-shadow: 0 0 0 transparent;
+  -o-box-shadow: 0 0 0 transparent;
+  box-shadow: 0 0 0 transparent;
+}
+
+/* line 36 : /Users/raymondke99/Sites/slideout-navigation/stylesheets/stylus/base.styl */
+html {
+  -webkit-font-smoothing: antialiased;
+}
+
+/* line 39 : /Users/raymondke99/Sites/slideout-navigation/stylesheets/stylus/base.styl */
+body {
+  font-size: 62.5%;
+  font-family: Arial, san-serif;
+  -webkit-animation: reset 1s ease 1;
+  -moz-animation: reset 1s ease 1;
+  -o-animation: reset 1s ease 1;
+  animation: reset 1s ease 1;
+}
+
+/* line 48 : /Users/raymondke99/Sites/slideout-navigation/stylesheets/stylus/base.styl */
+-webkit-animation: fade-in 1s ease 1 {
+  -moz-animation: fade-in 1s ease 1;
+  -o-animation: fade-in 1s ease 1;
+  animation: fade-in 1s ease 1;
+}
+
+/* line 54 : /Users/raymondke99/Sites/slideout-navigation/stylesheets/stylus/base.styl */
+section {
+  position: relative;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1em 0;
+  *zoom: 1;
+}
+
+/* line 63 : /Users/raymondke99/Sites/slideout-navigation/stylesheets/stylus/mixins.styl */
+section:before,
+section:after {
+  content: " ";
+/* 1 */
+  display: table;
+/* 2 */
+}
+
+/* line 65 : /Users/raymondke99/Sites/slideout-navigation/stylesheets/stylus/mixins.styl */
+section:after {
+  clear: both;
+}
+
+/* line 63 : /Users/raymondke99/Sites/slideout-navigation/stylesheets/stylus/base.styl */
+h1,
+.h1 {
+  font-size: 4.8em;
+}
+
+/* line 64 : /Users/raymondke99/Sites/slideout-navigation/stylesheets/stylus/base.styl */
+h2,
+.h2 {
+  font-size: 3.6em;
+}
+
+/* line 65 : /Users/raymondke99/Sites/slideout-navigation/stylesheets/stylus/base.styl */
+h3,
+.h3 {
+  font-size: 3em;
+}
+
+/* line 66 : /Users/raymondke99/Sites/slideout-navigation/stylesheets/stylus/base.styl */
+h4,
+.h4 {
+  font-size: 2.4em;
+}
+
+/* line 67 : /Users/raymondke99/Sites/slideout-navigation/stylesheets/stylus/base.styl */
+h5,
+.h5 {
+  font-size: 2em;
+}
+
+/* line 68 : /Users/raymondke99/Sites/slideout-navigation/stylesheets/stylus/base.styl */
+h6,
+.h6 {
+  font-size: 1.8em;
+}
+
+/* line 71 : /Users/raymondke99/Sites/slideout-navigation/stylesheets/stylus/base.styl */
+p,
+li,
+a,
+td {
+  font-size: 1.4em;
+  line-height: 1.5em;
+}
+
+/* line 74 : /Users/raymondke99/Sites/slideout-navigation/stylesheets/stylus/base.styl */
+p p,
+li p,
+a p,
+td p,
+p li,
+li li,
+a li,
+td li,
+p a,
+li a,
+a a,
+td a,
+p td,
+li td,
+a td,
+td td {
+  font-size: 1em;
+}
+
+/* line 78 : /Users/raymondke99/Sites/slideout-navigation/stylesheets/stylus/base.styl */
+li ul {
+  padding-left: 1em;
+}
+
+/* line 81 : /Users/raymondke99/Sites/slideout-navigation/stylesheets/stylus/base.styl */
+
+/* line 82 : /Users/raymondke99/Sites/slideout-navigation/stylesheets/stylus/base.styl */
+ul.disc,
+ol.disc {
+  list-style: disc;
+}
+
+/* line 84 : /Users/raymondke99/Sites/slideout-navigation/stylesheets/stylus/base.styl */
+ul.numbered,
+ol.numbered {
+  list-style: decimal;
+}
+
+/* line 88 : /Users/raymondke99/Sites/slideout-navigation/stylesheets/stylus/base.styl */
+strong {
+  font-weight: bold;
+}
+
+/* line 90 : /Users/raymondke99/Sites/slideout-navigation/stylesheets/stylus/base.styl */
+em {
+  font-style: italic;
+}
+
+/* line 93 : /Users/raymondke99/Sites/slideout-navigation/stylesheets/stylus/base.styl */
+form.nav-options {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  width: 300px;
+  padding: 20px;
+  margin-left: -160px;
+  background-color: #eee;
+  border: 1px solid #ddd;
+}
+
+/* line 102 : /Users/raymondke99/Sites/slideout-navigation/stylesheets/stylus/base.styl */
+form.nav-options .field {
+  margin-bottom: 15px;
+}
+
+/* line 103 : /Users/raymondke99/Sites/slideout-navigation/stylesheets/stylus/base.styl */
+form.nav-options label {
+  font-size: 1.6em;
+}
+
+/* line 106 : /Users/raymondke99/Sites/slideout-navigation/stylesheets/stylus/base.styl */
+
+/* line 107 : /Users/raymondke99/Sites/slideout-navigation/stylesheets/stylus/base.styl */
+nav.slideout-nav h3 {
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+/* line 110 : /Users/raymondke99/Sites/slideout-navigation/stylesheets/stylus/base.styl */
+nav.slideout-nav input,
+nav.slideout-nav textarea {
+  font-size: 1.6em;
+  width: 94%;
+  width: calc(100% - 1em);
+  padding: 0.35em 0.5em;
+  margin-bottom: 0.5em;
+  border: none;
+  border-bottom: 1px solid #fff;
+  background-color: rgba(255,255,255,0.2);
+}
+
+/* line 119 : /Users/raymondke99/Sites/slideout-navigation/stylesheets/stylus/base.styl */
+nav.slideout-nav input[type=submit],
+nav.slideout-nav textarea[type=submit] {
+  width: 100%;
+  background-color: rgba(255,255,255,0.75);
+}
+
+/* line 123 : /Users/raymondke99/Sites/slideout-navigation/stylesheets/stylus/base.styl */
+nav.slideout-nav textarea {
+  height: 40px;
+}
+
+/* line 127 : /Users/raymondke99/Sites/slideout-navigation/stylesheets/stylus/base.styl */
+::-webkit-input-placeholder {
+  color: #ccc;
+}
+
+/* line 128 : /Users/raymondke99/Sites/slideout-navigation/stylesheets/stylus/base.styl */
+:-moz-placeholder {
+  color: #ccc;
+}
+
+/* line 129 : /Users/raymondke99/Sites/slideout-navigation/stylesheets/stylus/base.styl */
+::-moz-placeholder {
+  color: #ccc;
+}
+
+/* line 130 : /Users/raymondke99/Sites/slideout-navigation/stylesheets/stylus/base.styl */
+:-ms-input-placeholder {
+  color: #ccc;
+}
+
+/* line 135 : /Users/raymondke99/Sites/slideout-navigation/stylesheets/stylus/base.styl */
+/*==============================*            ANIMATIONS
+\*==============================*/
+
+/* line 138 : /Users/raymondke99/Sites/slideout-navigation/stylesheets/stylus/base.styl */
+/*----- reset animation -----*/
+
+/* line 139 : /Users/raymondke99/Sites/slideout-navigation/stylesheets/stylus/base.styl */
+@-webkit-keyframes reset {
+
+/* line 140 : /Users/raymondke99/Sites/slideout-navigation/stylesheets/stylus/base.styl */
+  0% {
+    opacity: 0;
+  }
+
+/* line 142 : /Users/raymondke99/Sites/slideout-navigation/stylesheets/stylus/base.styl */
+  100% {
+    opacity: 0;
+  }
+}
+
+/* line 146 : /Users/raymondke99/Sites/slideout-navigation/stylesheets/stylus/base.styl */
+@-moz-keyframes reset {
+
+/* line 147 : /Users/raymondke99/Sites/slideout-navigation/stylesheets/stylus/base.styl */
+  0% {
+    opacity: 0;
+  }
+
+/* line 149 : /Users/raymondke99/Sites/slideout-navigation/stylesheets/stylus/base.styl */
+  100% {
+    opacity: 0;
+  }
+}
+
+/* line 153 : /Users/raymondke99/Sites/slideout-navigation/stylesheets/stylus/base.styl */
+@-o-keyframes reset {
+
+/* line 154 : /Users/raymondke99/Sites/slideout-navigation/stylesheets/stylus/base.styl */
+  0% {
+    opacity: 0;
+  }
+
+/* line 156 : /Users/raymondke99/Sites/slideout-navigation/stylesheets/stylus/base.styl */
+  100% {
+    opacity: 0;
+  }
+}
+
+/* line 159 : /Users/raymondke99/Sites/slideout-navigation/stylesheets/stylus/base.styl */
+/*----- fade-in animation -----*/
+
+/* line 160 : /Users/raymondke99/Sites/slideout-navigation/stylesheets/stylus/base.styl */
+@-webkit-keyframes fade-in {
+
+/* line 161 : /Users/raymondke99/Sites/slideout-navigation/stylesheets/stylus/base.styl */
+  0% {
+    opacity: 0;
+  }
+
+/* line 163 : /Users/raymondke99/Sites/slideout-navigation/stylesheets/stylus/base.styl */
+  100% {
+    opacity: 1;
+  }
+}
+
+/* line 167 : /Users/raymondke99/Sites/slideout-navigation/stylesheets/stylus/base.styl */
+@-moz-keyframes fade-in {
+
+/* line 168 : /Users/raymondke99/Sites/slideout-navigation/stylesheets/stylus/base.styl */
+  0% {
+    opacity: 0;
+  }
+
+/* line 170 : /Users/raymondke99/Sites/slideout-navigation/stylesheets/stylus/base.styl */
+  100% {
+    opacity: 1;
+  }
+}
+
+/* line 174 : /Users/raymondke99/Sites/slideout-navigation/stylesheets/stylus/base.styl */
+@-o-keyframes fade-in {
+
+/* line 175 : /Users/raymondke99/Sites/slideout-navigation/stylesheets/stylus/base.styl */
+  0% {
+    opacity: 0;
+  }
+
+/* line 177 : /Users/raymondke99/Sites/slideout-navigation/stylesheets/stylus/base.styl */
+  100% {
+    opacity: 1;
+  }
+}
